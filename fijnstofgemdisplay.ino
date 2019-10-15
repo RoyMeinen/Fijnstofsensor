@@ -38,8 +38,6 @@ void loop() {
 
     //Serial.print ("data into arrays \n");
     i++;
-    // if you want to just print the measured values, you can use toString() method as well
-    // Serial.println(pm.toString());
 
     if (i == 10) {
       //Serial.print ("into average calculation loop \n");
@@ -76,15 +74,10 @@ void loop() {
 
 
   } else {
-    // notice that loop delay is set to 5s (sensor sends data every 3 minutes) and some reads are not available
     Serial.print("Could not read values from sensor, reason: ");
     Serial.println(pm.statusToString());
   }
 
 
 
-
-  //lcd.init();
-  // initialize the lcd
-  // Print a message to the LCD.
 }
