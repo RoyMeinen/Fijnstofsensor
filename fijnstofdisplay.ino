@@ -18,7 +18,6 @@ void setup() {
   Serial.println(sds.setActiveReportingMode().toString()); // ensures sensor is in 'active' reporting mode
   Serial.println(sds.setCustomWorkingPeriod(3).toString()); // sensor sends data every 3 minutes
 
-
 }
 
 void loop() {
@@ -39,20 +38,13 @@ void loop() {
    lcd.setCursor(8,1);
   lcd.print(pm.pm10,1);
   lcd.setCursor(0,2);
-
-    // if you want to just print the measured values, you can use toString() method as well
-   // Serial.println(pm.toString());
-  } else {
-    // notice that loop delay is set to 5s (sensor sends data every 3 minutes) and some reads are not available
+    
+  } 
+  else {
     Serial.print("Could not read values from sensor, reason: ");
     Serial.println(pm.statusToString());
   }
 
-
-
-     //lcd.init();    
-   // initialize the lcd 
-  // Print a message to the LCD.
 
 
     delay(500);
